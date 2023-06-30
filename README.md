@@ -1,2 +1,2 @@
-# VInce-Portfolio
+# Vince-Portfolio
 Photographer portfolio 
