@@ -1,10 +1,18 @@
-import './App.css';
+import Nav from './components/Nav';
+import React from 'react';
+import Cursor from './components/Cursor';
 
 function App() {
-  return (
-    <div className="App">
-      <h1 className="text-6xl flex">TESTING</h1>
+  return(
+    <>
+    <Cursor />
+    <div className="flex p-5">
+      <Nav />
+      <div className="main-container">
+        <h1>PHOTOS GO HERE</h1>
+      </div>
     </div>
+    </>
   );
 }
 

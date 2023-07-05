@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* --------------------------------------------------------- */
+/* FOR THE CIRCULAR CURSOR */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #121212;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    transition: all 100ms ease;
+    transition-property: opacity, background-color, transform;
+    pointer-events: none;
+}
+
+html,body {
+    cursor: none
+}
+
+html *,body * {
+    cursor: none;
+}
+
+.c--hidden {
+     opacity: 0;
+}
+
+.c--clicked {
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: #121212;
+ }
+
+ .c--hover {
+    transform: translate(-50%, -50%) scale(0.50);
+    background-color: #121212;
+ }
+/* --------------------------------------------------------- */
+
+.nav-links a#active {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+}
