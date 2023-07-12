@@ -4,7 +4,7 @@ import React from "react";
 
 const Gallery = () => {
   const imageList = [...new Array(30)].map(
-    (number, index) => `../img/photo${index + 1}.jpg`
+    (number, index) => `/img/photo${index + 1}.jpg`
   );
 
   return (
