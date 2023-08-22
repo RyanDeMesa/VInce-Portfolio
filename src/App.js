@@ -19,7 +19,9 @@ function App() {
       <Cursor />
       <div className="flex p-5">
         <Nav onAboutClick={hideGallery} onGalleryClick={showGalleryHandler} />
-        <div className="main-container">{showGallery && <Gallery />}</div>
+        <div className="flex-1 main-container">
+          {showGallery && <Gallery />}
+        </div>
       </div>
     </>
   );
