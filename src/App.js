@@ -1,16 +1,20 @@
-import Nav from "./components/Nav";
 import React, { useState } from "react";
+import Nav from "./components/Nav";
 import Cursor from "./components/Cursor";
 import Gallery from "./components/Gallery";
+import About from "./components/About"; // Import your About component
 
 function App() {
+  const [showAbout, setShowAbout] = useState(false);
   const [showGallery, setShowGallery] = useState(true);
 
-  const hideGallery = () => {
+  const showAboutComponent = () => {
+    setShowAbout(true);
     setShowGallery(false);
   };
 
-  const showGalleryHandler = () => {
+  const showGalleryComponent = () => {
+    setShowAbout(false);
     setShowGallery(true);
   };
 
@@ -18,9 +22,13 @@ function App() {
     <>
       <Cursor />
       <div className="flex p-5">
-        <Nav onAboutClick={hideGallery} onGalleryClick={showGalleryHandler} />
+        <Nav
+          onAboutClick={showAboutComponent}
+          onGalleryClick={showGalleryComponent}
+        />
         <div className="flex-1 main-container">
-          {showGallery && <Gallery />}
+          {showAbout ? <About /> : null}
+          {showGallery ? <Gallery /> : null}
         </div>
       </div>
     </>
