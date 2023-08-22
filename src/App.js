@@ -9,8 +9,7 @@ function App() {
       <Cursor />
       <div className="flex p-5">
         <Nav />
-        <div className="main-container">
-          <h1>PHOTOS GO HERE</h1>
+        <div className="flex-1">
           <Gallery />
         </div>
       </div>
